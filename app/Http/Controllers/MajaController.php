@@ -134,7 +134,7 @@ class MajaController extends Controller
                             echo '<tr><td>'. $data['rincian'][1]['kode_rincian']  .'</td><td>:</td><td>' . $data['rincian'][1]['nominal'] . '</td></tr>';
                             echo '<tr><td>Total Amount</td><td>:</td><td>' . $data['totalNominal'] . '</td></tr>';
                             echo '</table>';
-                            echo '<form method="post" action="simulation.php"><input type="hidden" name="action" value="reversal" />';
+                            echo '<form method="post" action="'.url('/').'"><input type="hidden" name="action" value="reversal" />';
                             echo '<input type="hidden" name="kodeBank" value="' . $fields['kodeBank'] . '" />';
                             echo '<input type="hidden" name="kodeChannel" value="' . $fields['kodeChannel'] . '" />';
                             echo '<input type="hidden" name="kodeTerminal" value="' . $fields['kodeTerminal'] . '" />';
@@ -203,7 +203,7 @@ class MajaController extends Controller
                             echo '<tr><td>'. $data['rincian'][1]['kode_rincian']  .'</td><td>:</td><td>' . $data['rincian'][1]['nominal'] . '</td></tr>';
                             echo '<tr><td>Total Nominal</td><td>:</td><td>' . $data['totalNominal'] . '</td></tr>';
                             echo '</table>';
-                            echo '<form method="post" action="simulation.php"><input type="hidden" name="action" value="payment" />';
+                            echo '<form method="post" action="'.url('/').'"><input type="hidden" name="action" value="payment" />';
                             echo '<input type="hidden" name="kodeBank" value="' . $fields['kodeBank'] . '" />';
                             echo '<input type="hidden" name="kodeChannel" value="' . $fields['kodeChannel'] . '" />';
                             echo '<input type="hidden" name="kodeTerminal" value="' . $fields['kodeTerminal'] . '" />';
@@ -218,7 +218,7 @@ class MajaController extends Controller
                 echo '<br /><input type="reset" name="back" value="back" onclick="window.history.go(-1);" />';
                 break;
             default:
-                echo '<form method="post" action="simulation.php">
+                echo '<form method="post" action="'.url('/').'">
             <input type="hidden" name="action" value="inquiry" />
             Payment Number:
             <input type="text" name="nomorPembayaran" />
