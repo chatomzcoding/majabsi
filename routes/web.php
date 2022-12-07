@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MajaController::class,'index']);
 
 Route::prefix('dev')->group(function () {
     Route::get('/inquiry', [MajaController::class,'inquiry']);
