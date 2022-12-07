@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MajaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('dev')->group(function () {
+    Route::get('/inquiry', [MajaController::class,'inquiry']);
+    Route::get('/payment', [MajaController::class,'payment']);
+    Route::get('/reversal', [MajaController::class,'reversal']);
+});
+
+
