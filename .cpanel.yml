@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u1662612/public_html/sakola.zelnara.com
+    - /bin/cp -R routes $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
+    - /bin/cp -R app $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp composer.json $DEPLOYPATH
+    - /bin/cp composer.lock $DEPLOYPATH
